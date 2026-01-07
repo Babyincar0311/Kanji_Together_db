@@ -53,7 +53,7 @@ public class UserController {
     public ResponseEntity<?> deleteUser(@PathVariable Long id) {
         try {
             userService.softDeleteUser(id);
-            return ResponseEntity.ok().body("Đã xóa user thành công (Soft Delete)");
+            return ResponseEntity.ok().body("Đã xóa user thành công ");
         } catch (RuntimeException e) {
             return ResponseEntity.notFound().build();
         }
