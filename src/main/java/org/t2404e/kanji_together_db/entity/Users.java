@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "users")
 @Data
@@ -17,8 +17,11 @@ public class Users {
     public String name;
     @Column(unique = true)
     public String email;
+    @JsonProperty("has_entrance_exam")
     public Boolean has_entrance_exam;
+    @JsonProperty("is_active")
     public Boolean is_active;
+    @JsonProperty("is_verified")
     public Boolean is_verified;
 
     @UpdateTimestamp

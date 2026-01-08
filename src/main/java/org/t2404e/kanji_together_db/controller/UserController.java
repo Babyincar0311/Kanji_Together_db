@@ -48,7 +48,7 @@ public class UserController {
         }
     }
 
-    // 5. DELETE: Xóa user
+    // 5. DELETE: Xóa userr
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Long id) {
         try {

@@ -25,7 +25,6 @@ public class Clazz {
     public Integer create_by;
     public Integer edit_by;
 
-    //clazz_rel_users
     @ManyToMany
     @JoinTable(
             name = "clazz_rel_users",
